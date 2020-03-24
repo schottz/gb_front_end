@@ -1,0 +1,35 @@
+<body>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Tabela</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="tabela" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">USUARIO</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">DATA DE INCLUSAO</th>
+                            <th scope="col">DATA DE ALTERACAO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in data %}
+                            <tr>
+                                <td scope="col">{{ x.usuario }}</td>
+                                <td scope="col">{{ x.email }}</td>
+                                <td scope="col">{{ x.datainclusao }}</td>
+                                <td scope="col">{{ x.dataalteracao }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'plugins/datatables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
